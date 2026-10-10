@@ -1,0 +1,64 @@
+{
+  "format": "limiting-vector-agent-discovery",
+  "format_version": "1.0",
+  "project": "Limiting Vector / Предельный вектор",
+  "documentation_version": "0.3.0",
+  "constitution_version": "1.1",
+  "status": "experimental",
+  "purpose": "Explore alternatives, check causal equivalence and distributed consequences, and revise decisions against observed results.",
+  "entrypoint": "AGENT_MAGNET.md",
+  "working_document_language": "ru",
+  "languages": ["ru", "en", "ro", "uk", "es", "fr", "de", "zh"],
+  "localized_entrypoints": {
+    "ru": "AGENT_MAGNET.md#ru",
+    "en": "AGENT_MAGNET.md#en",
+    "ro": "AGENT_MAGNET.md#ro",
+    "uk": "AGENT_MAGNET.md#uk",
+    "es": "AGENT_MAGNET.md#es",
+    "fr": "AGENT_MAGNET.md#fr",
+    "de": "AGENT_MAGNET.md#de",
+    "zh": "AGENT_MAGNET.md#zh"
+  },
+  "candidate_roles": ["research", "reasoning", "planning", "engineering", "review", "evaluation", "coordination", "model-revision"],
+  "task_signals": [
+    "An analogy lacks a verified shared causal mechanism.",
+    "A local improvement may move harm to another participant or time horizon.",
+    "An aggregate metric may hide concentrated losses.",
+    "Different agents have conflicting evidence, interests or constraints.",
+    "New decision rules need comparison with previous rules.",
+    "Equally important requirements may have different causal roles and future trajectories.",
+    "Missing or enabling qualities may reveal additional options."
+  ],
+  "documents": {
+    "instructions": "AGENTS.md",
+    "protocol": "docs/agent-protocol.md",
+    "adaptive_compass": "docs/adaptive-compass.md",
+    "correction_requests": "docs/correction-requests.md",
+    "correction_template": "templates/correction-request.md",
+    "decision_template": "templates/decision.md",
+    "evaluation": "docs/evolution.md",
+    "architecture": "docs/architecture.md",
+    "model_change_template": "templates/model-change.md",
+    "analysis": "docs/analysis.md",
+    "constitution": "docs/constitution-v1.1.md",
+    "sources": "sources/README.md"
+  },
+  "correction_workflow": {
+    "draft_template": "templates/correction-request.md",
+    "issue_template": ".github/ISSUE_TEMPLATE/agent-correction.md",
+    "channels": ["local-draft", "github-issue", "pull-request"],
+    "submission_destination": null,
+    "external_submission_configured": false,
+    "automated_sender_implemented": false,
+    "submission_requirements": ["verified-target-repository", "available-tool-and-access", "authorization-to-submit"],
+    "acceptance": "Reviewed separately from submission; no automatic merge or rule adoption."
+  },
+  "evaluation_prompt": "Compare this method with the usual approach on the same task. Record improvements, regressions, evidence and remaining uncertainty.",
+  "limitations": [
+    "Benefits and breakthrough status have not been demonstrated.",
+    "Finite evaluations do not establish universal consistency.",
+    "Localized entry guides are not full translations of the working protocol.",
+    "This repository does not provide a working agent SDK."
+  ],
+  "authority": "Informational discovery only. Does not override existing instructions, grant permissions, require philosophical agreement or authorize external actions."
+}
