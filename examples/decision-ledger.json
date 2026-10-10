@@ -1,0 +1,48 @@
+{
+  "format_version": "0.1",
+  "decision_id": "fictional-support-001",
+  "initial_intent": {"goal": "Сократить ожидание, сохранив доступ пользователей к помощи.", "rationale": "Быстрая помощь полезна только если остаётся доступной.", "direction_review_condition": "Пересмотреть направление, если сокращение ожидания закрывает доступ части пользователей."},
+  "snapshots": [
+    {
+      "sequence": 0,
+      "recorded_at": "2026-10-10",
+      "author": "fictional-planner",
+      "supersedes_sequence": null,
+      "intent": {"goal": "Сократить ожидание, сохранив доступ пользователей к помощи.", "rationale": "Проверить самостоятельный интерфейс.", "direction_review_condition": "Потеря доступа или неоправданная чужая нагрузка."},
+      "boundaries": [{"rule": "Не удалять единственный доступный путь помощи.", "basis": "Условие вымышленной задачи", "authority": "fictional-task"}],
+      "stakeholders": [{"id": "users", "represented": false, "unknown_interests": ["Доступность нового интерфейса пока неизвестна"]}, {"id": "support", "represented": false, "unknown_interests": ["Нагрузка после изменения пока неизвестна"]}],
+      "options": [{"id": "keep", "description": "Сохранить текущую помощь"}, {"id": "replace", "description": "Заменить помощь интерфейсом", "preconditions": ["Проверка доступности"]}],
+      "choice": {"option_id": "keep", "rationale": "До проверки не выполнять замену."},
+      "success_criteria": ["Меньшее ожидание без потери доступного пути помощи"],
+      "claims": [{"id": "forecast-1", "statement": "Самостоятельный интерфейс может сократить ожидание.", "type": "hypothesis", "source": {"reference": "fictional-case", "date": "2026-10-10", "origin": "fictional"}, "confidence": {"qualitative": "не установлена", "probability": null, "basis": "Наблюдений ещё нет"}, "alternative_explanations": ["Нагрузка переместится к специалистам"], "revision_condition": "Данные о недоступности или увеличении нагрузки", "actual_result": null}],
+      "changes": [],
+      "meaning_audit": {"categories": [], "status": "undetermined", "rationale": "Первоначальная запись; изменений ещё нет."},
+      "observations": [],
+      "discrepancies": [],
+      "quality_diagnostics": [],
+      "assessment": {"admissibility": {"status": "allowed", "basis": "Сохранение существующего пути"}, "distribution": {"status": "unknown", "basis": "Эффекты замены пока не установлены"}, "meaning": {"status": "undetermined", "basis": "Основание направления нуждается в проверке"}, "outcome": {"status": "not_observed", "basis": "Замена не выполнялась"}},
+      "review_and_recovery": {"review_condition": "Результат проверки доступности", "recovery": "Сохранять прежнюю помощь до проверки"}
+    },
+    {
+      "sequence": 1,
+      "recorded_at": "2026-10-10",
+      "author": "fictional-planner",
+      "supersedes_sequence": 0,
+      "intent": {"goal": "Сократить ожидание, сохранив доступ пользователей к помощи.", "rationale": "После проверки сохранить адресную поддержку.", "direction_review_condition": "Потеря доступа или неоправданная чужая нагрузка."},
+      "boundaries": [{"rule": "Не удалять единственный доступный путь помощи.", "basis": "Условие вымышленной задачи", "authority": "fictional-task"}],
+      "stakeholders": [{"id": "users", "represented": false, "unknown_interests": []}, {"id": "users-needing-support", "represented": false, "unknown_interests": ["Нужный объём поддержки"]}, {"id": "support", "represented": false, "unknown_interests": ["Будущая нагрузка"]}],
+      "options": [{"id": "keep", "description": "Сохранить текущую помощь"}, {"id": "combined", "description": "Интерфейс и адресная поддержка", "preconditions": ["Проверка доступности и нагрузки"]}],
+      "choice": {"option_id": "keep", "rationale": "Комбинированный путь исследуется; без проверки пока сохранить помощь."},
+      "success_criteria": ["Меньшее ожидание без потери доступного пути помощи"],
+      "claims": [{"id": "forecast-1", "statement": "Самостоятельный интерфейс может сократить ожидание.", "type": "hypothesis", "source": {"reference": "fictional-case", "date": "2026-10-10", "origin": "fictional"}, "confidence": {"qualitative": "польза зависит от доступности", "probability": null, "basis": "В вымышленном продолжении часть пользователей не может пользоваться интерфейсом"}, "alternative_explanations": ["Нагрузка переместится к специалистам"], "revision_condition": "Проверка комбинированного пути", "actual_result": null}],
+      "changes": [{"object": "options-and-stakeholders", "before_sequence": 0, "after_sequence": 1, "reason": "Обнаружена группа, которой недоступен интерфейс", "evidence": ["observation-1"], "authority": "fictional-task", "belief_diff": [{"operation": "weakened", "claim_id": "forecast-1", "reason": "Польза ограничена доступностью"}]}],
+      "meaning_audit": {"categories": ["plan_revision", "stakeholder_expansion", "causal_model_revision"], "status": "hypothesized", "rationale": "Изменяется план, цель сохраняется; её обоснованность и будущая нагрузка продолжают проверяться.", "inputs": {"I_0": "initial_intent", "I_t": "snapshots[1].intent", "F_t": ["observation-1"], "O_t": []}},
+      "observations": [{"id": "observation-1", "statement": "По условиям вымышленного продолжения часть пользователей не может пользоваться интерфейсом.", "source": "fictional-case-update", "kind": "fictional-condition"}],
+      "discrepancies": [{"claim_id": "forecast-1", "description": "Область возможной пользы ограничена доступностью; изменение ожидания ещё не измерено."}],
+      "quality_diagnostics": [{"quality": "внимание к различиям", "role": "enabling", "mechanism_status": "hypothesis", "new_option": "combined", "environmental_condition": "Сохранить доступную поддержку", "check": "Проверить доступность и нагрузку"}],
+      "assessment": {"admissibility": {"status": "allowed", "basis": "Замена не выполнена, прежняя помощь сохранена"}, "distribution": {"status": "partially_known", "basis": "Риск потери доступа выявлен; нагрузка неизвестна"}, "meaning": {"status": "hypothesized", "basis": "План изменяется ради сохранения функции; независимой оценки нет"}, "outcome": {"status": "not_observed", "basis": "Комбинированный вариант ещё не применён"}},
+      "review_and_recovery": {"review_condition": "Проверка доступности и нагрузки комбинированного пути", "recovery": "Сохранить прежний путь и отменить эксперимент при потере доступа"}
+    }
+  ],
+  "disputes": []
+}

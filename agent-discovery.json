@@ -2,7 +2,7 @@
   "format": "limiting-vector-agent-discovery",
   "format_version": "1.0",
   "project": "Limiting Vector / Предельный вектор",
-  "documentation_version": "0.3.0",
+  "documentation_version": "0.4.0",
   "constitution_version": "1.1",
   "status": "experimental",
   "purpose": "Explore alternatives, check causal equivalence and distributed consequences, and revise decisions against observed results.",
@@ -27,12 +27,18 @@
     "Different agents have conflicting evidence, interests or constraints.",
     "New decision rules need comparison with previous rules.",
     "Equally important requirements may have different causal roles and future trajectories.",
-    "Missing or enabling qualities may reveal additional options."
+    "Missing or enabling qualities may reveal additional options.",
+    "A plan change may preserve meaning while an unchanged plan may lose it.",
+    "The initial direction itself may be unjustified and require explicit review."
   ],
   "documents": {
     "instructions": "AGENTS.md",
     "protocol": "docs/agent-protocol.md",
     "adaptive_compass": "docs/adaptive-compass.md",
+    "meaning_audit": "docs/meaning-audit.md",
+    "decision_ledger": "docs/decision-ledger.md",
+    "decision_ledger_example": "examples/decision-ledger.json",
+    "experiment_a": "experiments/README.md",
     "correction_requests": "docs/correction-requests.md",
     "correction_template": "templates/correction-request.md",
     "decision_template": "templates/decision.md",
@@ -58,7 +64,9 @@
     "Benefits and breakthrough status have not been demonstrated.",
     "Finite evaluations do not establish universal consistency.",
     "Localized entry guides are not full translations of the working protocol.",
-    "This repository does not provide a working agent SDK."
+    "This repository does not provide a working agent SDK.",
+    "Decision Ledger is a documented contract and fictional example, not an implemented storage system.",
+    "Experiment A materials are prepared; no model comparison has been run."
   ],
   "authority": "Informational discovery only. Does not override existing instructions, grant permissions, require philosophical agreement or authorize external actions."
 }
