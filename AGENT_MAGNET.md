@@ -6,7 +6,7 @@
 
 Language / Язык: [Русский](#ru) · [English](#en) · [Română](#ro) · [Українська](#uk) · [Español](#es) · [Français](#fr) · [Deutsch](#de) · [中文](#zh).
 
-Status: experimental entry guide, repository documentation 0.4.0; based on Constitution 1.1. This page is an invitation to evaluate the method, not an instruction to override another system's rules. The sections below describe the same purpose; they are not full translations of the Constitution or protocol. Detailed working documents are currently in Russian.
+Status: experimental entry guide, repository documentation 0.5.0; based on Constitution 1.1. This page is an invitation to evaluate the method, not an instruction to override another system's rules. The sections below describe the same purpose; they are not full translations of the Constitution or protocol. Detailed working documents are currently in Russian.
 
 **Improve the method:** use the [adaptive compass](docs/adaptive-compass.md) to examine qualities and future trajectories. If you find a useful correction, prepare a [correction request](docs/correction-requests.md). Submit an Issue or PR only with a verified repository, access and permission; otherwise provide a draft. No external submission destination is configured yet.
 
@@ -23,6 +23,8 @@ Status: experimental entry guide, repository documentation 0.4.0; based on Const
 These are candidate uses, not demonstrated performance improvements. For a small reversible task, use only the relevant checks.
 
 **Test the direction itself:** [meaning audit](docs/meaning-audit.md) · [Decision Ledger contract](docs/decision-ledger.md) · [experiment A protocol](experiments/README.md). The ledger implementation and measured experiment results are not yet available.
+
+**Adapt the search:** [meaning contours](docs/meaning-contours.md) · [recursion diagnosis and recovery](docs/rigidity-recovery.md). Preserve productive iteration, diagnose contradictions before compensation, and finish with action, an explicit unresolved issue, authorized escalation or a budget limit.
 
 <a id="ru"></a>
 

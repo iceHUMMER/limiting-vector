@@ -2,7 +2,7 @@
   "format": "limiting-vector-agent-discovery",
   "format_version": "1.0",
   "project": "Limiting Vector / Предельный вектор",
-  "documentation_version": "0.4.0",
+  "documentation_version": "0.5.0",
   "constitution_version": "1.1",
   "status": "experimental",
   "purpose": "Explore alternatives, check causal equivalence and distributed consequences, and revise decisions against observed results.",
@@ -29,12 +29,17 @@
     "Equally important requirements may have different causal roles and future trajectories.",
     "Missing or enabling qualities may reveal additional options.",
     "A plan change may preserve meaning while an unchanged plan may lose it.",
-    "The initial direction itself may be unjustified and require explicit review."
+    "The initial direction itself may be unjustified and require explicit review.",
+    "Repeated reasoning may be productive or may defend a criterion after its purpose is lost.",
+    "A positive combination may expand options while also amplifying risks."
   ],
   "documents": {
     "instructions": "AGENTS.md",
     "protocol": "docs/agent-protocol.md",
     "adaptive_compass": "docs/adaptive-compass.md",
+    "meaning_contours": "docs/meaning-contours.md",
+    "rigidity_recovery": "docs/rigidity-recovery.md",
+    "rigidity_review_template": "templates/rigidity-review.md",
     "meaning_audit": "docs/meaning-audit.md",
     "decision_ledger": "docs/decision-ledger.md",
     "decision_ledger_example": "examples/decision-ledger.json",
@@ -66,7 +71,9 @@
     "Localized entry guides are not full translations of the working protocol.",
     "This repository does not provide a working agent SDK.",
     "Decision Ledger is a documented contract and fictional example, not an implemented storage system.",
-    "Experiment A materials are prepared; no model comparison has been run."
+    "Experiment A materials are prepared; no model comparison has been run.",
+    "Division and multiplication are search operations, not universal numerical formulas.",
+    "Recursion diagnosis and recovery are conceptual procedures; no automatic detector is implemented."
   ],
   "authority": "Informational discovery only. Does not override existing instructions, grant permissions, require philosophical agreement or authorize external actions."
 }
